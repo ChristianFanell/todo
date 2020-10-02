@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/* https://www.behance.net/gallery/43505539/Hello-Stockholm-Free-Handmade-Typeface */
+
+html {
+    /* height: 100%; */
+}
+
+body {
+    background: linear-gradient(45deg, #56CCF2, #2F80ED);
+    /* background-color: #fcf8f8; */
+    min-height: 100vh;
+    line-height: 1.5;
+    overflow-y: scroll;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+li,
+td, 
+th {
+    /* font-family: 'Roboto', sans-serif; */
+    color: rgb(99, 96, 96);
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: .7em;
+}
+
+h2 {
+    font-size: 27px;
+}
+
+p {
+    margin-bottom: 1em;
+    font-size: 20px;
+}
+
+.back-button{
+    color: rgb(243, 235, 235);
+    background-color: rgb(226, 35, 35);
+}

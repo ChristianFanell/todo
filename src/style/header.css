@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&family=Yellowtail&display=swap');
+
+.header {
+    /* 
+     */
+     background-color: white;
+     
+     
+}
+
+
+.vertical-centre {
+
+    width: 100%;
+
+}
+
+.header-grid {
+    display: flex;
+    /* grid-template-columns: 10em 5fr 20em; */
+}
+
+.header-logo,
+.header-admin,
+.header-nav {
+    padding: 1em 0;
+}
+
+.header-logo {
+    /* padding-left: 1em; */
+    
+    width: 10%;
+}
+
+.header-admin {
+    /* background-color: brown; */
+    width: 30%;
+}
+
+.header-nav {
+    width: 60%;
+
+}
+
+.nav-icons {
+    margin-right: 10px;
+}
+
+.nav a {
+    margin-right: 3em;
+    font-weight: bolder;
+    font-size: 1.5em;
+    padding-bottom: 5px;
+
+}
+
+.nav a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.active {
+    border-bottom: 5px solid #66B1EB;
+}
+
+
+/* logotype */
+.logotype {
+    font-size: 1.5em;
+    /* background-color: rgb(60, 224, 60); */
+}
+
+.logotype-span {
+    border-radius: 5px;
+    margin-left: 15px;
+    font-family: 'MuseoModerno', cursive;
+    /* color: white; */
+    /* text-decoration: underline; */
+}
+

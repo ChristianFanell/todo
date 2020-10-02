@@ -1,3 +1,17 @@
+# About
+
+Todo app written in React with the purpose of learning TypeScript. The backend is a Asp.Net Core 3.1 Web Api app. I used MobX for user state management (user state only). As I started coding, the ideas for functionality kept growing. Not a very well planned application in other words and it is not done yet.
+
+The app have:
+
+* Login with roles - user and admin
+* Custom made datepicker
+* Some crud operations for todos and for adding/removing users/assigning roles
+* Statistics per user on the admin page with chart.js
+* Comments on todos
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
