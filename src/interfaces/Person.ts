@@ -1,7 +1,7 @@
 export default interface Person {
     name: string;
     email: string;
-    id: number;
+    personId: number;
     role: string;
     birthDay: 'string';
 }

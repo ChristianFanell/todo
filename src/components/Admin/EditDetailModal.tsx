@@ -51,7 +51,7 @@ const EditDetailModal = ({ id, setShow, show, setEdited }: propzz) => {
 
     const [changed, setChanged] = useState(false);
     const { data, error, isLoading } = useFetch({ url: PERSON_API_ADDRESS });
-
+    console.log(data);
     userStore.checkIfTokenIsValid();
     userStore.createUserObject();
 
@@ -170,8 +170,8 @@ const EditDetailModal = ({ id, setShow, show, setEdited }: propzz) => {
                                         <option value={person?.personId}>{person?.name}</option> 
                                         {
                                             !isLoading ? data.map((pers: Person) => {
-                                                if (person?.personId !== pers.id) {
-                                                    return <option value={pers.id} key={pers.id}>{pers.name}</option>
+                                                if (person?.personId !== pers.personId) {
+                                                    return <option value={pers.personId} key={pers.personId}>{pers.name}</option>
                                                 }
 
                                             }) : <option>{error.message}</option>

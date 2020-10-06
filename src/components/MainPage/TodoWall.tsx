@@ -4,7 +4,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import UserStore from '../../stores/userStore';
 import useFetch from '../../custom-hooks/useFetch';
 import { TODO_API_CURRENT } from '../../config/config';
-import Message from '../MainPage/Message';
+import LateTodosSidebar from '../MainPage/LateTodosSidebar';
 import TodoItem from './TodoItem';
 import TodoData from '../../interfaces/TodoData';
 
@@ -35,7 +35,7 @@ const TodoWall: React.FC = () => {
                         <h3>Listan är tom</h3>
                     </div>
                 </div>
-                <Message />
+                <LateTodosSidebar />
 
 
             </div>
@@ -59,7 +59,7 @@ const TodoWall: React.FC = () => {
                     }) : <p className="loading">laddar ...</p>
                 }
             </div>
-            <Message />
+            <LateTodosSidebar />
 
 
         </div>

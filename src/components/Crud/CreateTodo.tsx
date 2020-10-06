@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext, useRef } from 'react';
 
-import Message from '../MainPage/Message';
+import LateTodosSidebar from '../MainPage/LateTodosSidebar';
 import DatePicker from '../DatePicker/DatePicker';
 
 // interface
@@ -15,12 +15,12 @@ import {CREATE_TODO_API_ADRESS} from '../../config/config';
 import axios from 'axios';
 
 
-type todoId = number;
+// type todoId = number;
 
-const CreateTodo = (props: todoId) => {
+const CreateTodo = () => {
     const [description, setDescription] = useState<string>('');
     const [name, setName] = useState<string>('');
-    const [personId, setPersonId] = useState<number>(1);
+    const [personId, setPersonId] = useState<number>(0);
     const [toBeCompleted, setToBeCompleted] = useState<string>('');
     const [selectArrow, setSelectArrow] = useState(false);
     const firstRender = useRef(true);
@@ -57,7 +57,7 @@ const CreateTodo = (props: todoId) => {
         }
     }
 
-
+    console.log(data)
 
     const checkDescription = () => {
         if (description.length > 1) {
@@ -81,6 +81,7 @@ const CreateTodo = (props: todoId) => {
     const handleOnChange = (e : any) => {
         switch (e.target.name) {
             case 'name':
+                console.log(e.target.value);
                 setName(e.target.value);
                 checkName();
                 break;
@@ -139,7 +140,7 @@ const CreateTodo = (props: todoId) => {
                         <select name="select" onChange={handleOnChange}>
                             {
                                 !isLoading ? data.map((person: Person, i: number) => {
-                                    return <option value={person.id} key={i}>{person.name}</option>
+                                    return <option value={person.personId} key={i}>{person.name}</option>
                                 }) : <option>{error.message}</option>
                             }
 
@@ -149,7 +150,7 @@ const CreateTodo = (props: todoId) => {
                     </form>
                 </div>
             </div>
-            <Message />
+            <LateTodosSidebar />
         </div>
     )
 }
